@@ -1,0 +1,66 @@
+.index-header {
+  color: #ee66aa;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.index-header span {
+  color: #121331;
+  font-size: 2rem;
+}
+
+.index-information {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 5px;
+  color: #121331;
+}
+
+.index-gifImg img {
+  width: 75px;
+}
+
+.index-btn {
+  background-color: #ee66aa;
+  padding: 6px 0px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+.index-btn:hover {
+  background-color: #e6599f;
+}
+
+.index-create {
+  color: #ee66aa;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 18px;
+  cursor: pointer;
+}
+
+.index-create:hover {
+  color: #e6599f;
+}
+
+.index-imgRandom {
+  display: flex;
+  justify-content: center;
+}
+
+.index-imgRandom img {
+  width: 200px;
+  margin: 40px auto;
+}
+
+.index-credit {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.2rem;
+}

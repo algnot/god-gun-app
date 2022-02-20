@@ -1,0 +1,16 @@
+import img0 from './0.gif'
+import img1 from './1.gif'
+import img2 from './2.gif'
+import img3 from './3.gif'
+import img4 from './4.gif'
+import img5 from './5.gif'
+import img6 from './6.gif'
+import img7 from './7.gif'
+import img8 from './8.gif'
+import img9 from './9.gif'
+import img10 from './10.gif'
+import img11 from './11.gif'
+import img12 from './12.gif'
+import img13 from './13.gif'
+
+export default [img0, img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13]
