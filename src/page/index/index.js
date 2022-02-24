@@ -11,9 +11,12 @@ function Index() {
   useEffect(() => {
     const options = {
       strings: [
+        "ขอให้ Dek65 ทุกคนติดตามคณะที่หวังน่ะงับ 🫂",
         "เป็นกำลังใจให้นะ :) ",
         "สู้เขา เราทำได้ /^_^/ ",
         "ขอให้โลกใจดีกับเธอนะ <3 ",
+        "เมื่อคิดจะเดินไปข้างหน้า โปรดอย่าหันมองกลับหลังอย่างเสียดาย 👊",
+        "หลังพายุผ่านไป ฟ้าย่อมสดใสเสมอ 🌧",
       ],
       typeSpeed: 50,
       backSpeed: 50,
@@ -43,10 +46,11 @@ function Index() {
              onClick={() => window.location.href = "?p=create"}>สร้างคำอวยพร</div>
 
         <div className="index-credit">
-          Created by <span className="index-create"
-                           onClick={() => window.open('https://www.instagram.com/algnott/', '_blank')}>algnott</span>
-                     <span className="index-create"
-                           onClick={() => window.open('https://www.instagram.com/book_cnk/', '_blank')}>book_cnk</span> 🐶 🐵
+         Created by <span className="index-create"
+                           onClick={() => window.open('https://twitter.com/lilpark96', '_blank')}>Rest</span> 🐵<br/>
+         Created by <span className="index-create"
+                           onClick={() => window.open('https://www.instagram.com/algnott/', '_blank')}>algnott</span>🐶<br/>
+         
               
         </div>   
 

@@ -36,7 +36,7 @@ export default function Created({ setLoading }) {
           width: 120,
         },
       },
-      description:"null",
+      description: "null",
       channelId: "null",
       publishTime: "null",
       liveBroadcastContent: "null",
@@ -76,15 +76,15 @@ export default function Created({ setLoading }) {
     <div className="body">
       <div className="index-container">
         <div className="index-header">
-          <span style={{fontSize:25}}>กำลังใจของคุณถูกส่งไปแล้ว :)</span>
+          <span style={{ fontSize: 25 }}>กำลังใจของคุณถูกส่งไปแล้ว :)</span>
         </div>
         <div className="index-information">
           <span ref={el} />
         </div>
-        
+
         {
           data.music ? (
-            <iframe style={{marginTop:30}} src={`https://www.youtube.com/embed/${data.music.id.videoId}?controls=0`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe style={{ marginTop: 30 }} src={`https://www.youtube.com/embed/${data.music.id.videoId}?controls=0`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           ) : (
             <div className="index-imgRandom">
               <img src={img[parseInt(Math.random() * 13)]} />
@@ -92,7 +92,7 @@ export default function Created({ setLoading }) {
           )
         }
         <div className="index-create"
-             onClick={() => (window.location.href = "/")}>
+          onClick={() => (window.location.href = "/")}>
           กลับหน้าหลัก
         </div>
 
@@ -104,16 +104,10 @@ export default function Created({ setLoading }) {
         </div>
 
         <div className="index-credit">
-          Created by{" "}
-          <span
-            className="index-create"
-            onClick={() =>
-              window.open("https://www.instagram.com/algnott/", "_blank")
-            }
-          >
-            algnott
-          </span>{" "}
-          🐶
+          Created by <span className="index-create"
+            onClick={() => window.open('https://twitter.com/lilpark96', '_blank')}>Rest</span> 🐵<br />
+          Created by <span className="index-create"
+            onClick={() => window.open('https://www.instagram.com/algnott/', '_blank')}>algnott</span>🐶<br />
         </div>
       </div>
     </div>

@@ -140,8 +140,12 @@ export default function Create({setLoading}) {
         <div className="index-btn" style={{marginTop:20}}
              onClick={createContent}>สร้างกำลังใจ :)</div>
         <div className="index-credit">
+        Created by <span className="index-create"
+                           onClick={() => window.open('https://twitter.com/lilpark96', '_blank')}>Rest</span> 🐵<br/>
           Created by <span className="index-create"
                            onClick={() => window.open('https://www.instagram.com/algnott/', '_blank')}>algnott</span> 🐶
+
+
         </div>   
     </div>
   )
