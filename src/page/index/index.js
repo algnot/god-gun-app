@@ -39,7 +39,8 @@ function Index() {
           <img src={img[parseInt(Math.random() * 13)]} />
         </div>
         <div className="index-btn">รับคำอวยพรของคุณ</div>
-        <div className="index-create">สร้างคำอวยพร</div>
+        <div className="index-create"
+             onClick={() => window.location.href = "?p=create"}>สร้างคำอวยพร</div>
 
         <div className="index-credit">
           Created by <span className="index-create"

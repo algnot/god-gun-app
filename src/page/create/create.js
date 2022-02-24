@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import './create.css'
-import searchImg from './../../asset/img/19-magnifier-zoom-search-outline.gif'
 
+import {firestore} from './../../database'
 import Typed from "typed.js";
 import axios from 'axios';
 
-export default function Create() {
+export default function Create({setLoading}) {
   const el = useRef(null);
   const typed = useRef(null);
 
@@ -32,11 +32,16 @@ export default function Create() {
   }, []);
 
   const onSearch = (value) => {
+    if(!value) {
+      alert('กรุณาใส่ชื่อเพลงที่ต้องการค้นหา')
+      return
+    }
     axios(`https://www.googleapis.com/youtube/v3/search?part=snippet&key=${youtubeKey}&q=${value}`)
     .then((result) => {
         var data = result.data
         var temp = []
         data.items.map((snip,index) => {
+            snip.snippet.id = snip.id
             temp = [...temp , snip.snippet]
         })
         setUrl(temp[0])
@@ -44,10 +49,43 @@ export default function Create() {
     })
   }
 
+  const createContent = () => {
+    if(!name) {
+      alert('กรุณาระบุชื่อของไอต้าว :(')
+      return
+    }
+    if(!content) {
+      alert('กรุณาระบุกำลังใจของไอต้าว :(')
+      return
+    }
+    setLoading(true)
+
+    const id = parseInt(Math.random() * 1000000 + 1000000)
+    const contentRef = firestore.collection('motivation').doc(id.toString())
+    contentRef.set({
+      id : id,
+      created : new Date().valueOf(),
+      name : name, 
+      content : content,
+      music : url,
+      report : 0,
+    })
+    .then( _ => {
+      window.location.href = `?p=created&id=${id}`
+    })
+    
+  }
+
   return (
     <div className='create-container'>
-        <div className='create-header'><span ref={el} /></div>
+        <div className='create-header'>
+          <span ref={el} />
+        </div>
 
+        <div className='create-header-form' style={{margin : '0'}}>
+          <span style={{cursor:'pointer' , textDecoration:'underline'}}
+                onClick={() => window.location.href = "?p=home"}>กลับหน้าหลัก</span> 
+        </div>
         <div className='create-header-form'>ชื่อของไอต้าว* <span>({name.length}/20)</span> </div>
         <input name="name"
                type="text"
@@ -89,7 +127,7 @@ export default function Create() {
             list.map((data,index) => {
                 if(index == 0)
                 return(
-                    <div className="create-y-search">
+                    <div className="create-y-search" key={index}>
                         <div className="create-y-search-img"
                              style={{backgroundImage:`url(${data.thumbnails.medium.url})`}}></div>
                         <div className="create-y-search-name">
@@ -99,7 +137,8 @@ export default function Create() {
                 )
             })
         }
-        <div className="index-btn" style={{marginTop:20}}>สร้างคำอวยพร</div>
+        <div className="index-btn" style={{marginTop:20}}
+             onClick={createContent}>สร้างกำลังใจ :)</div>
         <div className="index-credit">
           Created by <span className="index-create"
                            onClick={() => window.open('https://www.instagram.com/algnott/', '_blank')}>algnott</span> 🐶

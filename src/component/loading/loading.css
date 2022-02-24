@@ -1,0 +1,22 @@
+.loading-container{
+    background-color: #ee66aa;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loading-container img{
+    width: 250px;
+}
+
+.loading-container div{
+    font-size: 22px;
+    color: #fff;
+    margin-top: 50px;
+}
