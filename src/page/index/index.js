@@ -44,7 +44,10 @@ function Index() {
 
         <div className="index-credit">
           Created by <span className="index-create"
-                           onClick={() => window.open('https://www.instagram.com/algnott/', '_blank')}>algnott</span> 🐶 🐵
+                           onClick={() => window.open('https://www.instagram.com/algnott/', '_blank')}>algnott</span>
+                     <span className="index-create"
+                           onClick={() => window.open('https://www.instagram.com/book_cnk/', '_blank')}>book_cnk</span> 🐶 🐵
+              
         </div>   
 
       </div>
