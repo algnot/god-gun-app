@@ -33,7 +33,6 @@ function Index() {
     const randomId = parseInt(Math.random() * 1000000 + 1000000)
     const randonRef = firestore.collection('motivation')
                       .where('id','>',randomId)
-                      .where('report','<',5)
                       .orderBy('id')
                       .limit(1)
     randonRef.get()
