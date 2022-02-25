@@ -38,6 +38,9 @@ function Index({setLoading}) {
                       .limit(1)
     randonRef.get()
     .then(docs => {
+      if(docs.size == 0){
+        randomMotivation()
+      }
       docs.forEach(doc => {
         window.location.href = `?p=random&id=${doc.data().id}`
       })
@@ -54,7 +57,8 @@ function Index({setLoading}) {
           กอดกัน
           <span>.com</span>
         </div>
-        <div className="index-information">
+        <div className="index-information"
+             style={{width:300}}>
           <span ref={el} />
         </div>
         <div className="index-imgRandom">
