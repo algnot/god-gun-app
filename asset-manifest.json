@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/god-gun-app/static/css/main.b8ab9a13.css",
+    "main.js": "/god-gun-app/static/js/main.8ea8e0f5.js",
+    "static/media/12.gif": "/god-gun-app/static/media/12.32d2d51ac426f550b47d.gif",
+    "static/media/8.gif": "/god-gun-app/static/media/8.cfce663acd63ee070d3d.gif",
+    "static/media/13.gif": "/god-gun-app/static/media/13.a24b8bd49ee5ec777a96.gif",
+    "static/media/6.gif": "/god-gun-app/static/media/6.5554dbae16725b86f5dc.gif",
+    "static/media/7.gif": "/god-gun-app/static/media/7.510b2705ada1b22466a6.gif",
+    "static/media/11.gif": "/god-gun-app/static/media/11.475905f1b63f63bc3247.gif",
+    "static/media/0.gif": "/god-gun-app/static/media/0.4bd94e8773be4133bc1c.gif",
+    "static/media/5.gif": "/god-gun-app/static/media/5.645b3edad6102b0e07ff.gif",
+    "static/media/9.gif": "/god-gun-app/static/media/9.0e1ed09d93aeb0f69498.gif",
+    "static/media/10.gif": "/god-gun-app/static/media/10.9104252a864d118ed820.gif",
+    "static/media/loading.gif": "/god-gun-app/static/media/loading.687ce6a815d85640a938.gif",
+    "static/media/4.gif": "/god-gun-app/static/media/4.f5013706f7cea302763a.gif",
+    "static/media/3.gif": "/god-gun-app/static/media/3.8672957beeb5f5393ba5.gif",
+    "static/media/2.gif": "/god-gun-app/static/media/2.38662da6ef70f0e8da71.gif",
+    "static/media/1.gif": "/god-gun-app/static/media/1.d8df219819ca4aecb17b.gif",
+    "index.html": "/god-gun-app/index.html",
+    "main.b8ab9a13.css.map": "/god-gun-app/static/css/main.b8ab9a13.css.map",
+    "main.8ea8e0f5.js.map": "/god-gun-app/static/js/main.8ea8e0f5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b8ab9a13.css",
+    "static/js/main.8ea8e0f5.js"
+  ]
+}
