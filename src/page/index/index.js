@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import img from './../../asset/img/img'
 import "./index.css";
 import Typed from "typed.js";
+import { firestore } from "../../database";
 
 function Index() {
   const el = useRef(null);
@@ -28,6 +29,24 @@ function Index() {
     };
   }, []);
 
+  const randomMotivation = () => {
+    const randomId = parseInt(Math.random() * 1000000 + 1000000)
+    const randonRef = firestore.collection('motivation')
+                      .where('id','>',randomId)
+                      .where('report','<',5)
+                      .orderBy('id')
+                      .limit(1)
+    randonRef.get()
+    .then(docs => {
+      docs.forEach(doc => {
+        window.location.href = `?p=random&id=${doc.data().id}`
+      })
+    })
+    .catch(_ => {
+      alert('บางอย่างผิดพลาด กรุณาลองใหม่อีกครั้ง :(')
+    })
+  }
+
   return (
     <div className="body">
       <div className="index-container">
@@ -41,9 +60,11 @@ function Index() {
         <div className="index-imgRandom">
           <img src={img[parseInt(Math.random() * 13)]} />
         </div>
-        <div className="index-btn">รับคำอวยพรของคุณ</div>
+        <div className="index-btn"
+             onClick={randomMotivation}>รับกำลังใจของคุณ</div>
+
         <div className="index-create"
-             onClick={() => window.location.href = "/god-gun-app?p=create"}>สร้างคำอวยพร</div>
+             onClick={() => window.location.href = "/god-gun-app?p=create"}>สร้างกำลังใจ</div>
 
         <div className="index-credit">
          Created by <span className="index-create"
