@@ -86,7 +86,8 @@ export default function Random({setLoading}) {
           กำลังใจจาก {' '}
           <span ref={el} />
         </div>
-        <div className="index-information">
+        <div className="index-information"
+             style={{width:350 , margin:'15px auto'}}>
           <span ref={el2} />
         </div>
         <div className="index-imgRandom"
@@ -97,8 +98,8 @@ export default function Random({setLoading}) {
         {
           data.music && (
             <div className="create-y-search"
-                 style={{marginTop:0 , marginBottom:40 , background :'#ee66aa'
-                       , padding:10, borderRadius:10, cursor:'pointer'}}
+                 style={{margin:'7px auto', background :'#ee66aa'
+                       , padding:10, borderRadius:10, cursor:'pointer', width:'fit-content'}}
                  onClick={() => window.location.href = `https://www.youtube.com/watch?v=${data.music.id.videoId}`}>
                 <div className="create-y-search-img"
                      style={{backgroundImage:`url(${data.music.thumbnails.medium.url})`}}></div>
