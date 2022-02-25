@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./created.css";
 
 import img from "./../../asset/img/img";
+import twiiterIcon from './../../asset/img/twitter_icon.png'
 import { firestore } from "./../../database";
 import Typed from "typed.js";
 import queryString from "query-string";
@@ -67,6 +68,8 @@ export default function Created({ setLoading }) {
       typed.current = new Typed(el.current, options);
     });
 
+    console.log(window.location);
+
     return () => {
       typed.current.destroy();
     };
@@ -84,7 +87,7 @@ export default function Created({ setLoading }) {
 
         {
           data.music ? (
-            <iframe style={{ marginTop: 30 }} src={`https://www.youtube.com/embed/${data.music.id.videoId}?controls=0`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe className="created-frame" width="300" height="190" style={{ marginTop: 30 }} src={`https://www.youtube.com/embed/${data.music.id.videoId}?controls=0`} title={data.music.title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
           ) : (
             <div className="index-imgRandom">
               <img src={img[parseInt(Math.random() * 13)]} />
@@ -92,8 +95,9 @@ export default function Created({ setLoading }) {
           )
         }
         <div className="index-create"
-          onClick={() => (window.location.href = "/")}>
-          กลับหน้าหลัก
+          style={{display:'flex' , alignItems:'center' , justifyContent:'center' , gap:5 , color:'rgb(65,105,225)'}}
+          onClick={() => window.open(`https://twitter.com/intent/tweet?url=${window.location.origin}%3Fp%3Drandom%26id%3D${data.id}&text=กำลังใจของ ${data.name} 😍&via=กอดกัน`, '_blank')}>
+          <img src={twiiterIcon} /> แชร์ไปยัง twitter
         </div>
 
         <div

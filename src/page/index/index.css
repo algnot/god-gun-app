@@ -45,6 +45,10 @@
   cursor: pointer;
 }
 
+.index-create img{
+  width: 20px;
+}
+
 .index-create:hover {
   color: #e6599f;
 }
