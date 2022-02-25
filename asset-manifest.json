@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/god-gun-app/static/css/main.c5cdae20.css",
-    "main.js": "/god-gun-app/static/js/main.1dd20639.js",
+    "main.css": "/god-gun-app/static/css/main.22764233.css",
+    "main.js": "/god-gun-app/static/js/main.4bdf4bc7.js",
     "static/media/12.gif": "/god-gun-app/static/media/12.32d2d51ac426f550b47d.gif",
     "static/media/8.gif": "/god-gun-app/static/media/8.cfce663acd63ee070d3d.gif",
     "static/media/13.gif": "/god-gun-app/static/media/13.a24b8bd49ee5ec777a96.gif",
@@ -18,11 +18,11 @@
     "static/media/2.gif": "/god-gun-app/static/media/2.38662da6ef70f0e8da71.gif",
     "static/media/1.gif": "/god-gun-app/static/media/1.d8df219819ca4aecb17b.gif",
     "index.html": "/god-gun-app/index.html",
-    "main.c5cdae20.css.map": "/god-gun-app/static/css/main.c5cdae20.css.map",
-    "main.1dd20639.js.map": "/god-gun-app/static/js/main.1dd20639.js.map"
+    "main.22764233.css.map": "/god-gun-app/static/css/main.22764233.css.map",
+    "main.4bdf4bc7.js.map": "/god-gun-app/static/js/main.4bdf4bc7.js.map"
   },
   "entrypoints": [
-    "static/css/main.c5cdae20.css",
-    "static/js/main.1dd20639.js"
+    "static/css/main.22764233.css",
+    "static/js/main.4bdf4bc7.js"
   ]
 }
