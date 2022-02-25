@@ -14,6 +14,8 @@
   font-size: 1.3rem;
   margin-top: 5px;
   color: #121331;
+  width: 300px;
+  height: calc(1.3rem * 2);
 }
 
 .index-gifImg img {
@@ -60,7 +62,7 @@
 
 .index-imgRandom img {
   width: 200px;
-  margin: 40px auto;
+  margin: 10px auto 35px auto;
 }
 
 .index-credit {
