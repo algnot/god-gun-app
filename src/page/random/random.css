@@ -1,0 +1,13 @@
+.random-header{
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.random-header span{
+    color: #ee66aa;
+}
+
+.index-information{
+    text-align: center;
+}

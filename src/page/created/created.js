@@ -67,9 +67,6 @@ export default function Created({ setLoading }) {
       };
       typed.current = new Typed(el.current, options);
     });
-
-    console.log(window.location);
-
     return () => {
       typed.current.destroy();
     };
@@ -96,7 +93,7 @@ export default function Created({ setLoading }) {
         }
         <div className="index-create"
           style={{display:'flex' , alignItems:'center' , justifyContent:'center' , gap:5 , color:'rgb(65,105,225)'}}
-          onClick={() => window.open(`https://twitter.com/intent/tweet?url=${window.location.origin}/god-gun-app%3Fp%3Drandom%26id%3D${data.id}&text=กำลังใจของ ${data.name} 😍&via=กอดกัน`, '_blank')}>
+          onClick={() => window.open(`https://twitter.com/intent/tweet?url=${window.location.origin}/god-gun-app%3Fp%3Drandom%26id%3D${data.id}&text=กำลังใจของ ${data.name} 😍 &via=กอดกัน`, '_blank')}>
           <img src={twiiterIcon} /> แชร์ไปยัง twitter
         </div>
 

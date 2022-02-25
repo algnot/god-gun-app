@@ -5,7 +5,7 @@ import "./index.css";
 import Typed from "typed.js";
 import { firestore } from "../../database";
 
-function Index() {
+function Index({setLoading}) {
   const el = useRef(null);
   const typed = useRef(null);
 
@@ -30,6 +30,7 @@ function Index() {
   }, []);
 
   const randomMotivation = () => {
+    setLoading(true)
     const randomId = parseInt(Math.random() * 1000000 + 1000000)
     const randonRef = firestore.collection('motivation')
                       .where('id','>',randomId)
@@ -70,8 +71,6 @@ function Index() {
                            onClick={() => window.open('https://twitter.com/lilpark96', '_blank')}>Rest</span> 🐵<br/>
          Created by <span className="index-create"
                            onClick={() => window.open('https://www.instagram.com/algnott/', '_blank')}>algnott</span>🐶<br/>
-         
-              
         </div>   
       </div>
     </div>

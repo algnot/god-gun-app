@@ -25,11 +25,11 @@ function App() {
         showLoading && <Loading />
       }
       {
-        page == 'home' ? <Index/>
+        page == 'home' ? <Index setLoading={setShowLoading}/>
         : page == 'create' ? <Create setLoading={setShowLoading} />
         : page == 'created' ? <Created setLoading={setShowLoading} />
         : page == 'random' ? <Random setLoading={setShowLoading} />
-        : <Index/>
+        : <Index setLoading={setShowLoading}/>
       }
     </div>
   );
