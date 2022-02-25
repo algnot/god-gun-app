@@ -84,7 +84,7 @@ export default function Create({setLoading}) {
 
         <div className='create-header-form' style={{margin : '0'}}>
           <span style={{cursor:'pointer' , textDecoration:'underline'}}
-                onClick={() => window.location.href = "?p=home"}>กลับหน้าหลัก</span> 
+                onClick={() => window.location.href = "/god-gun-app?p=home"}>กลับหน้าหลัก</span> 
         </div>
         <div className='create-header-form'>ชื่อของไอต้าว* <span>({name.length}/20)</span> </div>
         <input name="name"

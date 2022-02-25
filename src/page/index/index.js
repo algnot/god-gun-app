@@ -43,7 +43,7 @@ function Index() {
         </div>
         <div className="index-btn">รับคำอวยพรของคุณ</div>
         <div className="index-create"
-             onClick={() => window.location.href = "?p=create"}>สร้างคำอวยพร</div>
+             onClick={() => window.location.href = "/god-gun-app?p=create"}>สร้างคำอวยพร</div>
 
         <div className="index-credit">
          Created by <span className="index-create"
