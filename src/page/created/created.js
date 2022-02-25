@@ -102,7 +102,7 @@ export default function Created({ setLoading }) {
 
         <div
           className="index-create"
-          onClick={() => (window.location.href = "/")}
+          onClick={() => (window.location.href = "/god-gun-app")}
         >
           กลับหน้าหลัก
         </div>
